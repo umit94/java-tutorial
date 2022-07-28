@@ -1,0 +1,9 @@
+package temperatureConverterInterfaceExample;
+
+import temperatureConverterInterfaceExample.converters.CanConvertToCelsius;
+import temperatureConverterInterfaceExample.converters.CanConvertToFahrenheit;
+import temperatureConverterInterfaceExample.converters.CanConvertToKelvin;
+
+public class Converter implements CanConvertToCelsius, CanConvertToFahrenheit, CanConvertToKelvin {
+
+}
