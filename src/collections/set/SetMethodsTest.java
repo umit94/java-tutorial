@@ -28,8 +28,8 @@ public class SetMethodsTest {
         //--copyOf---
 
         //?????????????
-        //copyOfSurnames'in bir elemanina yeni nesne atadigimda neden surnames'in nesnesi de degisiyor?
-        // copyOfSurnames'e yeni referans atadim, surnames'de eski referans yok mu?
+        //copyOfSurnames'in bir elemanina yeni nesne atadigimda neden surnames'in nesnesi de degisiyor? ==> Çünkü copyOfSurnames, surnames'in elemanlarının referanslarını tutuyor
+        // copyOfSurnames'e yeni referans atadim, surnames'de eski referans yok mu? ==> copyOfSurnames, surnames'in elemanlarının referanslarını tuttuğu için herhangi birinin elemanında yapılan değişiklik diğerine de etki eder
         copyOfSurnames.forEach((element)->{
             if(element instanceof MyClass myClass)
                 myClass= new MyClass();
@@ -45,6 +45,9 @@ public class SetMethodsTest {
                 System.out.println(myClass.getA());
 
         });
+
+        //copyOfSurnames, surnames'in elemanlarının referanslarını tutar. Herhangi birinin elemanında yapılan değişiklik diğerine de etki eder,
+        // ancak surnames'e yeni bir referans eklenir veya referansın başka bir objeyi göstermesi sağlanırsa copyOfSurnames bundan etkilenmez
 
     }
 }
